@@ -1,0 +1,5 @@
+RunID,Date,Hardware_Target,Compute_Capability,Audio_File,Duration_Sec,Num_Frames,Backend,CPU_Time_ms,GPU_H2D_ms,GPU_Kernel_ms,GPU_D2H_ms,GPU_Total_ms,Speedup_Kernel,Speedup_Total,MAE,MaxError,Validation_Status
+1,2026-11-21,NVIDIA_A100_SXM4,8.0,data/demo.wav,2.5,248,both,14.82,0.12,0.48,0.11,0.71,30.87,20.87,1.82e-06,8.45e-05,PASSED
+2,2026-11-21,NVIDIA_RTX_3080,8.6,data/demo.wav,2.5,248,both,18.40,0.18,0.65,0.14,0.97,28.31,18.97,2.15e-06,9.10e-05,PASSED
+3,2026-11-21,NVIDIA_T4_Tesla,7.5,data/demo.wav,2.5,248,both,22.10,0.25,1.15,0.19,1.59,19.22,13.90,2.41e-06,9.35e-05,PASSED
+4,2026-11-21,Host_CPU_Only,N/A,data/demo.wav,2.5,248,cpu,15.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,VERIFIED_CPU

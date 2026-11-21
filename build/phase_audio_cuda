@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Phase Audio CUDA Launcher (invokes native binary or verification runner)
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ -f "$DIR/phase_audio_cuda.bin" ]; then
+    "$DIR/phase_audio_cuda.bin" "$@"
+else
+    python3 "$DIR/../scripts/run_pipeline.py" "$@"
+fi

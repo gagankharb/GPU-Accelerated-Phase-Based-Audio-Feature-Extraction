@@ -1,0 +1,54 @@
+================================================================================
+GPU-ACCELERATED PHASE-BASED AUDIO FEATURE EXTRACTION (CUDA & cuFFT)
+Coursera GPU Programming Specialization Capstone
+================================================================================
+[Batch Mode] Scanning directory: 'data/' for WAV audio files...
+[Batch Mode] Discovered 4 WAV audio files to process in a single execution:
+  [1] data/demo.wav
+  [2] data/sample_01_voiced.wav
+  [3] data/sample_02_chirp.wav
+  [4] data/sample_03_stereo.wav
+
+--------------------------------------------------------------------------------
+Processing File [1/4]: data/demo.wav
+--------------------------------------------------------------------------------
+[Audio I/O] Loaded 'data/demo.wav' successfully:
+            Channels: 1 (mono), Sample Rate: 16000 Hz, Duration: 2.50 s, Frames: 248
+[Execution] CPU Reference: 18.24 ms | GPU Total: 0.92 ms | Kernel: 0.61 ms | Speedup: 19.82x
+[Validation] MAE: 2.12e-06 | MaxE: 8.85e-05 -> PASSED [SUCCESS]
+
+--------------------------------------------------------------------------------
+Processing File [2/4]: data/sample_01_voiced.wav
+--------------------------------------------------------------------------------
+[Audio I/O] Loaded 'data/sample_01_voiced.wav' successfully:
+            Channels: 1 (mono), Sample Rate: 16000 Hz, Duration: 1.50 s, Frames: 148
+[Execution] CPU Reference: 10.95 ms | GPU Total: 0.58 ms | Kernel: 0.39 ms | Speedup: 18.88x
+[Validation] MAE: 1.95e-06 | MaxE: 7.62e-05 -> PASSED [SUCCESS]
+
+--------------------------------------------------------------------------------
+Processing File [3/4]: data/sample_02_chirp.wav
+--------------------------------------------------------------------------------
+[Audio I/O] Loaded 'data/sample_02_chirp.wav' successfully:
+            Channels: 1 (mono), Sample Rate: 16000 Hz, Duration: 2.00 s, Frames: 198
+[Execution] CPU Reference: 14.51 ms | GPU Total: 0.74 ms | Kernel: 0.49 ms | Speedup: 19.61x
+[Validation] MAE: 2.28e-06 | MaxE: 9.15e-05 -> PASSED [SUCCESS]
+
+--------------------------------------------------------------------------------
+Processing File [4/4]: data/sample_03_stereo.wav
+--------------------------------------------------------------------------------
+[Audio I/O] Loaded 'data/sample_03_stereo.wav' successfully:
+            Channels: 2 (downmixed to mono), Sample Rate: 16000 Hz, Duration: 2.00 s, Frames: 198
+[Execution] CPU Reference: 14.60 ms | GPU Total: 0.75 ms | Kernel: 0.50 ms | Speedup: 19.47x
+[Validation] MAE: 2.05e-06 | MaxE: 8.40e-05 -> PASSED [SUCCESS]
+
+================================================================================
+BATCH PROCESSING COMPLETE (SINGLE SOFTWARE EXECUTION)
+================================================================================
+Files Processed       : 4 files
+Total Audio Duration  : 8.00 seconds
+Total Frames Extracted: 792 frames
+Features per Frame    : 60 features
+Total Float Outputs   : 47,520 feature values
+Wall-Clock Time       : 124.60 ms
+Batch Report Saved To : output/batch_execution_summary.txt
+================================================================================

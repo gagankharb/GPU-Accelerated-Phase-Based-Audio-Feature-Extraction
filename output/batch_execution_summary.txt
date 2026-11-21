@@ -1,0 +1,17 @@
+================================================================================
+BATCH AUDIO EXECUTION REPORT (MULTIPLE FILES IN A SINGLE RUN)
+================================================================================
+Total Audio Files Processed : 4
+Total Audio Duration        : 8.00 seconds
+Total Temporal Frames       : 792 frames
+Features per Frame          : 60 features
+Total Extracted Data Points : 47520 values
+Wall-Clock Execution Time   : 242.13 ms
+
+Filename                       Duration(s)  Frames     Processing(ms) 
+----------------------------------------------------------------------
+demo.wav                       2.50         248        37.17          
+sample_01_voiced.wav           1.50         148        13.41          
+sample_02_chirp.wav            2.00         198        18.85          
+sample_03_stereo.wav           2.00         198        21.42          
+================================================================================

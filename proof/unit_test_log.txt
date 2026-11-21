@@ -1,0 +1,33 @@
+================================================================================
+RUNNING CAPSTONE UNIT & PIPELINE VALIDATION TESTS
+================================================================================
+test_01_wav_loading_and_format (__main__.TestAudioFeatureExtraction)
+Verify WAV metadata and PCM 16-bit 16 kHz loading. ... ok
+test_02_multichannel_downmixing (__main__.TestAudioFeatureExtraction)
+Verify stereo to mono averaging conversion. ... ok
+test_03_frame_count_formula (__main__.TestAudioFeatureExtraction)
+Verify framing arithmetic: T = 1 + floor((M - 400) / 160). ... ok
+test_04_phase_residual_wrapping_bounds (__main__.TestAudioFeatureExtraction)
+Verify wrap_phase maps arbitrary angles strictly to [-pi, pi]. ... ok
+test_05_feature_dimensions (__main__.TestAudioFeatureExtraction)
+Verify extracted feature matrix matches (num_frames, 60). ... ok
+test_06_rms_silence_gating (__main__.TestAudioFeatureExtraction)
+Verify silent frames produce zeroed phase residuals. ... ok
+test_07_invalid_input_handling (__main__.TestAudioFeatureExtraction)
+Verify rejection of invalid inputs. ... ok
+test_08_csv_output_integrity (__main__.TestAudioFeatureExtraction)
+Verify generated CSV file format, column headers, and data integrity. ... ok
+test_09_gpu_execution_status (__main__.TestAudioFeatureExtraction)
+Check for GPU availability. If CUDA GPU is unavailable, explicitly report ... skipped 'NVIDIA CUDA GPU hardware is NOT available on current host machine. GPU feature extraction tests are marked as SKIPPED (not executed). The project is structured and ready to compile & execute on Coursera GPU Lab / NVIDIA GPU.'
+
+----------------------------------------------------------------------
+Ran 9 tests in 11.172s
+
+OK (skipped=1)
+================================================================================
+Tests Run     : 9
+Failures      : 0
+Errors        : 0
+Skipped (GPU) : 1
+ALL EXECUTED TESTS PASSED SUCCESSFULLY [OK]
+================================================================================

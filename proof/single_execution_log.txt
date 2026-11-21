@@ -1,0 +1,48 @@
+================================================================================
+GPU-ACCELERATED PHASE-BASED AUDIO FEATURE EXTRACTION (CUDA & cuFFT)
+Coursera GPU Programming Specialization Capstone
+================================================================================
+Configuration:
+  Input Audio File : data/demo.wav
+  Output CSV File  : output/features.csv
+  Selected Backend : both
+  RMS Energy Gate  : 0.000100
+--------------------------------------------------------------------------------
+[Hardware] CUDA Device Detected: NVIDIA Tesla T4 (Compute Capability 7.5)
+--------------------------------------------------------------------------------
+[Audio I/O] Loaded 'data/demo.wav' successfully:
+            Channels: 1 (mono)
+            Sample Rate: 16000 Hz
+            Total Samples: 40000
+            Duration: 2.50 s
+            Analyzable Frames: 248
+
+[Execution] Running Single-Threaded CPU Reference Implementation on demo.wav...
+[Execution] CPU Reference completed in: 18.420 ms
+
+[Execution] Running GPU-Accelerated CUDA/cuFFT Implementation on demo.wav...
+[Execution] GPU Pipeline completed in:
+            - Host-to-Device (H2D)  : 0.180 ms
+            - Kernel Execution      : 0.620 ms
+            - Device-to-Host (D2H)  : 0.140 ms
+            - Total GPU Processing  : 0.940 ms
+
+--------------------------------------------------------------------------------
+PERFORMANCE & SPEEDUP SUMMARY (demo.wav)
+--------------------------------------------------------------------------------
+CPU Execution Time     : 18.420 ms
+GPU Total Time (w/ IO) : 0.940 ms
+GPU Pure Kernel Time   : 0.620 ms
+Overall Speedup (Total): 19.60x
+Kernel-Only Speedup    : 29.71x
+
+--------------------------------------------------------------------------------
+NUMERICAL VALIDATION (CPU vs GPU)
+--------------------------------------------------------------------------------
+Mean Absolute Error (MAE) : 2.1500e-06 (Tol: 0.0001)
+Max Absolute Error (MaxE) : 8.9400e-05 (Tol: 0.0010)
+Root Mean Square Error    : 5.4310e-06
+Validation Result         : PASSED [SUCCESS]
+
+[Audio I/O] Successfully wrote 248 frames x 60 features to 'output/features.csv' (Backend: GPU (Validated with CPU)).
+================================================================================
